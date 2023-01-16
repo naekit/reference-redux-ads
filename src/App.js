@@ -23,8 +23,9 @@ function App() {
 			initialRender = false
 			return
 		}
-
-		dispatch(sendCart(cart))
+		if (cart.changed) {
+			dispatch(sendCart(cart))
+		}
 	}, [cart, dispatch])
 
 	return (
