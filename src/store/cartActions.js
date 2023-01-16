@@ -7,6 +7,7 @@ export const fetchCart = () => {
 			const res = await fetch(
 				"https://react-ref-async-default-rtdb.firebaseio.com/cart.json"
 			)
+
 			if (!res.ok) {
 				throw new Error("Could not fetch cart!")
 			}
